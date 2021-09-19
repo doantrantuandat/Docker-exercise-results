@@ -1,0 +1,4 @@
+C:\WINDOWS\system32>docker exec -it ex1.4 bash
+root@4e784531f0c1:/# apt update
+root@4e784531f0c1:/# apt install curl
+(after update ubuntu and installing curl, going back to terminal 01)

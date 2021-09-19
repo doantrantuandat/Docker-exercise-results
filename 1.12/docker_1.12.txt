@@ -1,0 +1,34 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS D:\Blog\material-applications-main-localForBlog\example-frontend> docker build . -t frontend
+[+] Building 445.2s (16/16) FINISHED
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 466B                                                                               0.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 87B                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:18.04                                                    5.0s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                      0.0s
+ => [internal] load build context                                                                                  0.2s
+ => => transferring context: 708.45kB                                                                              0.2s
+ => [ 1/10] FROM docker.io/library/ubuntu:18.04@sha256:9bc830af2bef73276515a29aa896eedfa7bdf4bdbc5c1063b4c457a4bb  0.0s
+ => => resolve docker.io/library/ubuntu:18.04@sha256:9bc830af2bef73276515a29aa896eedfa7bdf4bdbc5c1063b4c457a4bbb8  0.0s
+ => CACHED [ 2/10] WORKDIR /usr/src/app                                                                            0.0s
+ => [ 3/10] RUN apt-get update                                                                                   130.6s
+ => [ 4/10] RUN apt-get install -y curl                                                                           51.1s
+ => [ 5/10] RUN curl -sL https://deb.nodesource.com/setup_14.x | bash                                            115.0s
+ => [ 6/10] RUN apt install -y nodejs                                                                             26.4s
+ => [ 7/10] COPY . .                                                                                               0.1s
+ => [ 8/10] RUN npm install                                                                                       72.8s
+ => [ 9/10] RUN npm run build                                                                                     22.2s
+ => [10/10] RUN npm install -g serve                                                                              12.9s
+ => exporting to image                                                                                             8.9s
+ => => exporting layers                                                                                            8.9s
+ => => writing image sha256:80545671f2b6ce19d5161db9dd2186cffe61d4d5b650d63585d164013fe349bd                       0.0s
+ => => naming to docker.io/library/frontend                                                                        0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+PS D:\Blog\material-applications-main-localForBlog\example-frontend> docker run -p 5000:5000 frontend
+INFO: Accepting connections at http://localhost:5000

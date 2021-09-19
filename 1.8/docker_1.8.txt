@@ -1,0 +1,20 @@
+D:\Blog\Docker-exercise-results\1.8>docker build . -t curler
+D:\Blog\Docker-exercise-results\1.8>docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED          SIZE
+curler                              latest    4baf13b86008   39 minutes ago   115MB
+ubuntu                              latest    fb52e22af1b0   2 weeks ago      72.8MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   6 months ago     83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   6 months ago     15.7MB
+web-server                          latest    978fbf315695   6 months ago     15.7MB
+devopsdockeruh/pull_exercise        latest    d9854bc0e13a   2 years ago      75.3MB
+D:\Blog\Docker-exercise-results\1.8>docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>

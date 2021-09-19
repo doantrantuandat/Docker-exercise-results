@@ -1,0 +1,31 @@
+PS C:\WINDOWS\system32> docker run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+a330b6cecb98: Pull complete
+e0ad2c0621bc: Pull complete
+9e56c3e0e6b7: Pull complete
+09f31c94adc6: Pull complete
+32b26e9cdb83: Pull complete
+20ab512bbb07: Pull complete
+Digest: sha256:853b221d3341add7aaadf5f81dd088ea943ab9c918766e295321294b035f3f3e
+Status: Downloaded newer image for nginx:latest
+e98f1e5d57a442f0b034f2fb46d9e7817714b14777d312be2f2e16ffed354099
+PS C:\WINDOWS\system32> docker run -d nginx
+c289bb8a0ec4ac7a86f174957b84db871125f6996e4552c90fe1c5bcf926bd6a
+PS C:\WINDOWS\system32> docker run -d nginx
+b1feb00ce8d6378e93c16a0bb61522e7726dd215d5d44513f51075308f276544
+PS C:\WINDOWS\system32> docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+b1feb00ce8d6   nginx     "/docker-entrypoint.…"   17 seconds ago   Up 16 seconds   80/tcp    brave_ganguly
+c289bb8a0ec4   nginx     "/docker-entrypoint.…"   20 seconds ago   Up 19 seconds   80/tcp    beautiful_yonath
+e98f1e5d57a4   nginx     "/docker-entrypoint.…"   2 minutes ago    Up 2 minutes    80/tcp    xenodochial_hermann
+PS C:\WINDOWS\system32> docker stop beautiful_yonath
+beautiful_yonath
+PS C:\WINDOWS\system32> docker stop xenodochial_hermann
+xenodochial_hermann
+PS C:\WINDOWS\system32> docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
+b1feb00ce8d6   nginx     "/docker-entrypoint.…"   56 seconds ago   Up 55 seconds               80/tcp    brave_ganguly
+c289bb8a0ec4   nginx     "/docker-entrypoint.…"   59 seconds ago   Exited (0) 17 seconds ago             beautiful_yonath
+e98f1e5d57a4   nginx     "/docker-entrypoint.…"   2 minutes ago    Exited (0) 4 seconds ago              xenodochial_hermann
+PS C:\WINDOWS\system32>

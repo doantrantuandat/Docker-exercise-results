@@ -1,0 +1,19 @@
+PS D:\Blog\Docker-exercise-results\1.9> docker run -d --name 1.9ex -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service:alpine
+fabdabd3f258aa09a8923f712010f505e0a7908bcebb84ebb8449531a581d3b3
+
+(check file text.log)
+
+PS D:\Blog\Docker-exercise-results\1.9> docker inspect 1.9ex
+...
+ },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "D:\\Blog\\Docker-exercise-results\\1.9/text.log",
+                "Destination": "/usr/src/app/text.log",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+...
