@@ -1,0 +1,6 @@
+D:\Blog\material-applications-main-localForBlog\scaling-exercise>docker-compose up -d --scale compute=3
+Starting load-balancer              ... done
+Starting scaling-exercise_compute_1 ... done
+Starting calculator                 ... done
+Creating scaling-exercise_compute_2 ... done
+Creating scaling-exercise_compute_3 ... done

@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  redis-2.4:
+    image: redis
+    container_name: redis-2.4
+ 
+  backend-2.4:
+    image: backend
+    ports:
+    - 8080:8080
+    environment:
+    - REDIS_HOST=redis-2.4
+    container_name: backend-2.4
+
